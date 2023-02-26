@@ -16,4 +16,14 @@
     .btn-main{
         @apply bg-indigo-600 hover:bg-indigo-500 text-white font-medium p-2 rounded-md
     }
+    .btn-normal{
+        @apply bg-gray-700 hover:bg-indigo-500 text-white font-medium p-2 rounded-md
+    }
+
+    .input-filter-l {
+        @apply placeholder:text-gray-400 dark:placeholder:text-gray-600 border border-gray-200 dark:border-gray-700 rounded-t-md rounded-l-md rounded-b-md rounded-r-none text-sm font-medium text-gray-600 dark:text-gray-400 dark:bg-gray-600
+    }
+    .input-filter-r {
+        @apply placeholder:text-gray-400 dark:placeholder:text-gray-600 border border-l-0 border-gray-200 dark:border-gray-700 rounded-t-md rounded-r-md rounded-b-md rounded-l-none text-sm font-medium text-gray-600 dark:text-gray-400 dark:bg-gray-600
+    }
 }
