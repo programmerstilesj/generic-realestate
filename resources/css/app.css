@@ -20,6 +20,10 @@
         @apply bg-gray-700 hover:bg-indigo-500 text-white font-medium p-2 rounded-md
     }
 
+    .btn-outline{
+        @apply p-2 rounded-md border shadow-sm border-gray-300 dark:border-gray-800 hover:border-gray-400 hover:bg-gray-50 dark:hover:border-gray-700 dark:hover:bg-gray-800
+    }
+
     .input-filter-l {
         @apply placeholder:text-gray-400 dark:placeholder:text-gray-600 border border-gray-200 dark:border-gray-700 rounded-t-md rounded-l-md rounded-b-md rounded-r-none text-sm font-medium text-gray-600 dark:text-gray-400 dark:bg-gray-600
     }

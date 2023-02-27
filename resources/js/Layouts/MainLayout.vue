@@ -9,8 +9,8 @@
           <Link :href="route('listing.index')">Generic Real Estate App</Link>&nbsp;
         </div>
         <div v-if="user" class="flex items-center gap-4">
-          <div class="text-sm text-gray-500">{{ user.name }}</div>
-          <Link :href="route('listing.create')" class="btn-main">+ New Listing</Link>
+          <Link class="text-sm text-gray-500" :href="route('realtor.listing.index')">{{ user.name }}</Link>
+          <Link :href="route('realtor.listing.create')" class="btn-main">+ New Listing</Link>
           <Link :href="route('logout')" method="delete" as="button">Logout</Link>
         </div>
         <div v-else class="flex items-center gap-2">
