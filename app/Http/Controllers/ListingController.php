@@ -28,6 +28,7 @@ class ListingController extends Controller
                 'filters' => $filters,
                 'listings' => Listing::mostRecent()
                     ->filter($filters)
+                    ->withoutSold()
                     ->paginate(6)
                     ->withQueryString()
             ]
@@ -40,10 +41,17 @@ class ListingController extends Controller
     public function show(Listing $listing)
     {
         $listing->load(['images']);
+        $offer = !Auth::user()
+            ? null
+            : $listing->offers()->byUser()->first();
+
+        $listing->offers(Auth::user());
+
         return inertia(
             'Listing/Show',
             [
-                'listing' => $listing
+                'listing' => $listing,
+                'offerMade' => $offer,
             ]
         );
     }
